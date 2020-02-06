@@ -87,7 +87,12 @@ Instead, we will use these methods
 
 ```js
 // Example
-
+documents.getElementById('my-ID-name')
+documenrts.querySelector('body')
+documenrts.querySelector('div')
+documenrts.querySelector('div.bacon > ul')
+documenrts.querySelector('#my-ID-name')
+documenrts.querySelector('.my-class-name')
 ```
 
 ---
@@ -100,12 +105,13 @@ Instead, we will use these methods
 
 You can modify the content of a leaf, an end node with 
 
-- [`.innerText()`](https://www.w3schools.com/jsref/prop_node_innertext.asp)
+- [`.innerText`](https://www.w3schools.com/jsref/prop_node_innertext.asp)
 - [`.innerHTML()`](https://www.w3schools.com/jsref/prop_html_innerhtml.asp) 
 
 ```js
 // Example
-
+const myTitle = document.getelementById('id-name');
+myTitle.innerText = 'New title';
 ```
 
 ---
@@ -127,6 +133,16 @@ To add a new node to an HTML page, you need to do it in 3 steps.
 
 ```js
 // Example
+//1. make node
+const paragraph = document.createElement('p');
+//2. Add content to node
+paragraph.innerText = 'New hacker right here';
+//3. Add note to existing node
+document.querySelector('body').appendChild(paragraph);
+
+//to add an id to something:
+paragraph.id = 'new-id-name';
+
 
 ```
 
@@ -152,9 +168,15 @@ We can style elements from JavaScript.
 const myDiv = document.getElementById('my-div');
 
 myDiv.style.background = "purple";
+myDiv.stlye.borderRadius = "23px";
+
+//camelCase is ingterpretted as dashes.  i.e. above borderRadius becomes border-radius;
 ```
 
 ⚠️ Houston. We have a problem!
+
+
+//  can put styles directly into HTML: <p class="dsd" style=!"height:23px; width:40px;">
 
 ---
 

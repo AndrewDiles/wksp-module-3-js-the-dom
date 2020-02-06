@@ -2,6 +2,7 @@ console.log('...crickets...');
 
 const myDiv = document.getElementById('#main');
 
+
 const h1tag = document.createElement('h1');
 h1tag.innerText = 'The best How I Met Your Mother episode (according to fans)';
 document.querySelector('body').appendChild(h1tag);
@@ -38,6 +39,7 @@ atag.setAttribute('href', 'https://himym2017.wordpress.com/2017/03/25/the-best-h
 atag.innerText = 'Source';
 document.querySelector('body').appendChild(atag);
 
+
 // const headname = document.getElementByTagName('head');
 
 const csscode = document.createElement('link');
@@ -50,7 +52,14 @@ csscode.class = 'css';
 document.head.appendChild(csscode);
 // head.querySelector('head').appendChild(csscode);
 
-
+h1tag.classList.add("h1classname");
+par1.classList.add("p1classname");
+h2tag.classList.add("h2classname");
+par2.classList.add("p2classname");
+imgtag.classList.add("imgclassname");
+par3.classList.add("p3classname");
+par4.classList.add("p4classname");
+atag.classList.add("aclassname")
 
 
 // const paragraph = document.createElement('p');
