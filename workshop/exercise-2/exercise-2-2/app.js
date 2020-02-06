@@ -3,6 +3,9 @@ const FROGS = 3;
 
 const myMain = document.getElementById('main');
 const myTrack = document.getElementById('track');
+const myBody = document.getElementById('body');
+
+
 
 
 // for later:
@@ -35,23 +38,28 @@ const myTrack = document.getElementById('track');
 // 1. Create for loop that makes use of FROGS to know how many lanes to create.
 
     for(i=1;i<=FROGS;i++){
+            // 2. Create li  
         let lane = document.createElement('li');
         track.appendChild(lane);
-
+            // 3. Create span and add it to the li
         let frognum = document.createElement('span');
         frognum.innerText = i;
         lane.appendChild(frognum);
-
+            // 4. Assign an id to each lane
         lane.id = `frog-${i}`;
-
-
-
-  
     };
+//was trying to add frogStable through js instead on directly into html file
 
-    // 2. Create li    
+    // let frogScript = document.createElement('script');
+    // frogScript.src = './assets/frogStable.js';
+    // myBody.appendChild(frogScript);
 
-    // 3. Create span and add it to the li
+    const racers = [];
+    for (i=0; i<FROGS; i++){
+        racers.push(frogStable[i]);
 
-    // 4. Assign an id to each lane
 
+        // const newFrog = frogStable[i];
+        // racers.push(newFrog);
+    }
+    console.log(racers);

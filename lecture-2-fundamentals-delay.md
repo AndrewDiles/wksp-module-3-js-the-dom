@@ -6,6 +6,12 @@
 
 ```js
 // Example
+//takes a function and an amount of time as parameters.
+
+setTimeout (function(){
+    console.log('Hello');
+}, 3000); //time in ms
+
 
 ```
 
@@ -15,7 +21,15 @@
 
 ```js
 // Example
+//repeats
 
+//setting a const like this will automatically begin this type of timer and it will be happening.
+const myTimer = setInterval(function(){
+    console.log('here');
+}, 2000);
+
+//to stop it from running
+clearInterval(myTimer);
 ```
 
 ---
